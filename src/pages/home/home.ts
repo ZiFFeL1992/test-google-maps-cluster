@@ -74,6 +74,11 @@ export class HomePage {
         console.log(marker);
 
         marker.setAnimation(GoogleMapsAnimation.BOUNCE);
+
+        marker.one(GoogleMapsEvent.INFO_CLICK).then((param) => {
+          console.log('info click');
+          console.log(param);
+        });
       });
 
     });
